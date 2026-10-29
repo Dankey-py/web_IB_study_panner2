@@ -1,6 +1,6 @@
 # StudyOS — project showcase
 
-An independent English-language showcase for the IB study planner. A student project website with a Swiss-inspired grid, a warm-white reading area, a compact ash-grey navigation header drawn from the planner, four pages and a small illustrative review interaction.
+An independent English-language showcase for the IB study planner. A student project website with a Swiss-inspired grid, a warm-white reading area, a compact ash-grey navigation header drawn from the planner, five pages and a small illustrative review interaction.
 
 ## Open locally
 
@@ -17,8 +17,8 @@ Open http://localhost:8080. Stop the preview with Control+C.
 ## Upload to GitHub Pages
 
 1. Extract the ZIP and create a new GitHub repository, for example `studyos-showcase`. A public repository works with GitHub Free.
-2. Upload the **contents** of this folder to the repository root. `index.html` must be at the root, beside `product.html`, `development.html`, `source.html` and the `assets` directory. Do not upload just the ZIP, and do not place everything inside another enclosing folder.
-3. Commit the files to `main`.w
+2. Upload the **contents** of this folder to the repository root. `index.html` must be at the root, beside `product.html`, `development.html`, `future.html`, `source.html` and the `assets` directory. Do not upload just the ZIP, and do not place everything inside another enclosing folder.
+3. Commit the files to `main`.
 4. In the repository, open **Settings → Pages**.
 5. Under **Build and deployment**, select **Deploy from a branch**. Choose **main** and **/(root)**, then save.
 6. Wait for the deployment to complete. Pages will show the published address, normally `https://YOUR-USERNAME.github.io/studyos-showcase/`.
@@ -32,10 +32,11 @@ Official publishing instructions: https://docs.github.com/en/pages/getting-start
 - `index.html` — overview, planning illustration and product introduction.
 - `product.html` — functions, an interactive review example and a development screenshot.
 - `development.html` — design decisions, simplified architecture and data diagrams, building plan.
+- `future.html` — a 150-word essay about proposed future development.
 - `source.html` — frontend/backend GitHub links and an accessible guide to the code.
 - `404.html` — fallback page.
 - `assets/styles.css` — shared styling, responsive layouts, reduced-motion and print styles.
-- `assets/main.js` — mobile menu, screenshot dialog and illustrative review example.
+- `assets/main.js` — screenshot dialog and illustrative review example.
 - `assets/favicon.svg` — project icon.
 - `assets/images/` — bundled development screenshots.
 
@@ -65,12 +66,14 @@ The site uses short first-person project descriptions. It contains no fabricated
 
 ## Checks completed
 
-- All four main pages inspected at 320px, 390px and 1280px viewport widths; no document-level horizontal overflow.
-- Four icon navigation links checked on desktop and mobile.
+- The original four main pages inspected at 320px, 390px and 1280px viewport widths; no document-level horizontal overflow.
+- Four icon navigation links checked on desktop and mobile; the future essay is linked from the home page, building plan and footer.
 - Review example: edit, confirm, reset and blank-name rejection exercised.
 - Screenshot dialog opening and closing exercised.
 - JavaScript syntax and local asset/link targets checked.
 
-External AI, email and the full planner were not tested as part of this static-site delivery. No GitHub deployment was performed.
+External AI, email and the full planner were not tested as part of this static-site delivery. The website is published through GitHub Pages.
 
 CSS and JavaScript URLs contain content-based version parameters. When changing either asset, update the corresponding version in all HTML pages to avoid mixed-version browser caches.
+
+The Future development page uses the approved 150-word essay unchanged, in a responsive two-column reading layout. Proposed user observation and later improvements remain future intentions.

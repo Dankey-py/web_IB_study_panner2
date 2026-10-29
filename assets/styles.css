@@ -294,3 +294,11 @@ code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size
 .compact-header :focus-visible { outline-color: var(--peach); }
 @media (max-width:480px) { .compact-header-inner { min-height: 66px; gap: 16px; } .compact-brand { font-size: 22px; } .compact-nav { gap: 3px; } .compact-nav a { width: 36px; height: 38px; } .compact-nav svg { width: 18px; height: 18px; } }
 @media print { .compact-header { display: none; } }
+
+/* Future plan: a short essay on the same asymmetric reading grid. */
+.future-essay { display: grid; grid-template-columns: 1fr 1.25fr; gap: 8%; padding-block: clamp(40px,6vw,78px) clamp(48px,7vw,90px); }
+.future-heading h1 { font-size: clamp(38px,4.5vw,62px); }
+.future-copy { max-width: 62ch; border-top: 1px solid var(--line); padding-top: 23px; font-size: 18px; line-height: 1.8; }
+.future-copy p:last-child { margin-bottom: 0; }
+@media (max-width:760px) { .future-essay { grid-template-columns: 1fr; gap: 30px; } .future-heading h1 { font-size: clamp(38px,9vw,56px); } .future-copy { font-size: 16px; line-height: 1.8; padding-top: 22px; } }
+@media print { .future-essay { padding-block: 25px; } .future-copy { font-size: 11pt; } }

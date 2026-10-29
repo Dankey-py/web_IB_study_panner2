@@ -48,9 +48,9 @@ if (demo) {
       else item.removeAttribute('aria-current');
     });
     const states = [
-      ['01 / THE PROPOSAL', 'A large project becomes three phases.', 'An example proposal breaks coursework into research, drafting and review. A suggestion does not yet change the calendar.', 'Review the proposal →', 'DRAFT / NOT SAVED', 'Nothing has been added to the calendar.', 'Read-only proposal'],
-      ['02 / YOUR REVIEW', 'Make the first step your own.', 'Edit the first phase name in the example. In StudyOS, review also includes dates, effort and priority. Confirm only when the proposal makes sense.', 'Confirm this example →', 'EDITING / NOT SAVED', 'Your edits stay in this example until you confirm.', 'Editable — try a new name'],
-      ['03 / CONFIRMED', 'A reviewed plan is ready to use.', 'The example now shows your confirmed phases. In the full application, confirmation saves the reviewed plan and makes it visible in the calendar.', 'Example confirmed ✓', 'CONFIRMED / EXAMPLE ONLY', 'Example complete. No real planner data was created.', 'Reviewed phase']
+      ['Step 1 / A suggestion', 'Three tasks for the project.', 'This example divides coursework into research, writing and review. Nothing has been added to a calendar yet.', 'Review this plan →', 'Draft / not saved', 'Nothing has been saved yet.', 'Suggested name'],
+      ['Step 2 / Check and edit', 'What would you change?', 'Try changing the first task name. In the actual planner, I can also edit the dates, effort and priority before saving.', 'Confirm this example →', 'Reviewing / not saved', 'Check the first task, then confirm this example.', 'You can edit this'],
+      ['Step 3 / Confirm', 'The reviewed plan is ready.', 'In StudyOS, confirming adds the reviewed tasks to the calendar. Here, it only completes this example.', 'Example confirmed ✓', 'Confirmed / example only', 'This example has not changed the actual planner.', 'Reviewed task']
     ][step];
     ['demo-label','demo-heading','demo-explanation','demo-next','proposal-status','proposal-foot','edit-hint'].forEach((id, i) => document.getElementById(id).textContent = states[i]);
     input.readOnly = step !== 1;
@@ -58,7 +58,7 @@ if (demo) {
   }
   next.addEventListener('click', () => {
     if (step === 1 && !input.value.trim()) {
-      feedback.textContent = 'Give the first phase a name before confirming.';
+      feedback.textContent = 'Add a name for the first task before confirming.';
       input.setAttribute('aria-invalid', 'true');
       input.focus();
       return;
@@ -67,7 +67,7 @@ if (demo) {
     input.value = input.value.trim();
     step = Math.min(step + 1, 2);
     render();
-    feedback.textContent = step === 1 ? 'Review step opened. You can now edit the first phase.' : 'Confirmed in this example. Your reviewed phase: ' + input.value + '.';
+    feedback.textContent = step === 1 ? 'You can now edit the first task name.' : 'Confirmed in this example. First task: ' + input.value + '.';
     if (step === 1) input.focus();
     else document.getElementById('demo-reset').focus();
   });
@@ -76,7 +76,7 @@ if (demo) {
     input.value = 'Research the question';
     input.removeAttribute('aria-invalid');
     render();
-    feedback.textContent = 'Example reset. No planner data was created.';
+    feedback.textContent = 'Back to the start. Nothing was saved to the actual planner.';
     next.focus();
   });
 }

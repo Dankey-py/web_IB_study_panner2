@@ -1,6 +1,6 @@
 # StudyOS — project showcase
 
-An independent English-language showcase for the IB study planner. Swiss-inspired typography, a warm-white/black/vermilion palette, four pages, responsive layouts and a small illustrative review interaction.
+An independent English-language showcase for the IB study planner. A student project website with a Swiss-inspired grid, a warm-white reading area, an ash-grey sidebar drawn from the planner, four pages and a small illustrative review interaction.
 
 ## Open locally
 
@@ -18,7 +18,7 @@ Open http://localhost:8080. Stop the preview with Control+C.
 
 1. Extract the ZIP and create a new GitHub repository, for example `studyos-showcase`. A public repository works with GitHub Free.
 2. Upload the **contents** of this folder to the repository root. `index.html` must be at the root, beside `product.html`, `development.html`, `source.html` and the `assets` directory. Do not upload just the ZIP, and do not place everything inside another enclosing folder.
-3. Commit the files to `main`.
+3. Commit the files to `main`.w
 4. In the repository, open **Settings → Pages**.
 5. Under **Build and deployment**, select **Deploy from a branch**. Choose **main** and **/(root)**, then save.
 6. Wait for the deployment to complete. Pages will show the published address, normally `https://YOUR-USERNAME.github.io/studyos-showcase/`.
@@ -59,9 +59,9 @@ Screenshots:
 - `overview.png`: development capture from 8 October 2026.
 - `plan-review.png`: development test-workspace capture from 28 October 2026.
 
-Screenshots are displayed in monochrome using CSS; the original pixels remain in the bundled files. They represent dated development interfaces. Features and descriptions were checked against the local source; current local code may differ from the GitHub version. The simplified database map omits authentication, conversation and other supporting tables.
+Screenshots are displayed in their original colours. The grey sidebar, book icon and restrained warm accents connect this showcase to the application; the reading area remains light for longer descriptions. They represent dated development interfaces. Features and descriptions were checked against the local source; current local code may differ from the GitHub version. The simplified database map omits authentication, conversation and other supporting tables.
 
-The site contains no fabricated testimonials, adoption figures, grade improvements or personal contribution claims. Proposed evaluation work is labelled as proposed. Add verified authorship and personal reflection if you want a more personal application portfolio.
+The site uses short first-person project descriptions. It contains no fabricated testimonials, adoption figures, grade improvements or personal anecdotes. Proposed evaluation work is labelled as proposed. The wording follows the user’s requested direct style; it does not claim an exact match to a verified English writing sample.
 
 ## Checks completed
 

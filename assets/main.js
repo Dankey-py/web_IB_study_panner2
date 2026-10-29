@@ -1,22 +1,4 @@
 'use strict';
-document.documentElement.classList.add('js');
-const menu = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('#navigation');
-if (menu && navigation) {
-  menu.hidden = false;
-  menu.addEventListener('click', () => {
-    const open = menu.getAttribute('aria-expanded') !== 'true';
-    menu.setAttribute('aria-expanded', String(open));
-    navigation.classList.toggle('is-open', open);
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
-      menu.setAttribute('aria-expanded', 'false');
-      navigation.classList.remove('is-open');
-      menu.focus();
-    }
-  });
-}
 const dialog = document.querySelector('.image-dialog');
 if (dialog && typeof dialog.showModal === 'function') {
   let trigger;
@@ -48,9 +30,9 @@ if (demo) {
       else item.removeAttribute('aria-current');
     });
     const states = [
-      ['Step 1 / A suggestion', 'Three tasks for the project.', 'This example divides coursework into research, writing and review. Nothing has been added to a calendar yet.', 'Review this plan →', 'Draft / not saved', 'Nothing has been saved yet.', 'Suggested name'],
-      ['Step 2 / Check and edit', 'What would you change?', 'Try changing the first task name. In the actual planner, I can also edit the dates, effort and priority before saving.', 'Confirm this example →', 'Reviewing / not saved', 'Check the first task, then confirm this example.', 'You can edit this'],
-      ['Step 3 / Confirm', 'The reviewed plan is ready.', 'In StudyOS, confirming adds the reviewed tasks to the calendar. Here, it only completes this example.', 'Example confirmed ✓', 'Confirmed / example only', 'This example has not changed the actual planner.', 'Reviewed task']
+      ['Step 1 / A suggestion', 'Three tasks for the project.', 'The suggested phases are research, writing and review. The next step is to check whether the tasks describe the work clearly enough.', 'Review this plan →', 'Draft / not saved', 'Nothing has been saved yet.', 'Suggested name'],
+      ['Step 2 / Check and edit', 'What would you change?', 'Try changing the first task name so its action is clearer. In StudyOS, the review also includes dates, effort and priority.', 'Confirm this example →', 'Reviewing / not saved', 'Check the first task, then confirm this example.', 'You can edit this'],
+      ['Step 3 / Confirm', 'The reviewed plan is ready.', 'Confirmation is the step that turns a reviewed proposal into saved work in StudyOS. This example shows that decision without creating planner records.', 'Example confirmed ✓', 'Confirmed / example only', 'This example has not changed the actual planner.', 'Reviewed task']
     ][step];
     ['demo-label','demo-heading','demo-explanation','demo-next','proposal-status','proposal-foot','edit-hint'].forEach((id, i) => document.getElementById(id).textContent = states[i]);
     input.readOnly = step !== 1;

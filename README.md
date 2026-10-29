@@ -1,6 +1,6 @@
 # StudyOS — project showcase
 
-An independent English-language showcase for the IB study planner. A student project website with a Swiss-inspired grid, a warm-white reading area, an ash-grey sidebar drawn from the planner, four pages and a small illustrative review interaction.
+An independent English-language showcase for the IB study planner. A student project website with a Swiss-inspired grid, a warm-white reading area, a compact ash-grey navigation header drawn from the planner, four pages and a small illustrative review interaction.
 
 ## Open locally
 
@@ -59,16 +59,18 @@ Screenshots:
 - `overview.png`: development capture from 8 October 2026.
 - `plan-review.png`: development test-workspace capture from 28 October 2026.
 
-Screenshots are displayed in their original colours. The grey sidebar, book icon and restrained warm accents connect this showcase to the application; the reading area remains light for longer descriptions. They represent dated development interfaces. Features and descriptions were checked against the local source; current local code may differ from the GitHub version. The simplified database map omits authentication, conversation and other supporting tables.
+A prominent Beta notice appears at the top of each page. Screenshot captions describe the function, while this README retains capture provenance. Screenshots are displayed in their original colours. The compact grey header and restrained warm accents connect this showcase to the application; the reading area remains light for longer descriptions. They represent dated development interfaces. Features and descriptions were checked against the local source; current local code may differ from the GitHub version. The simplified database map omits authentication, conversation and other supporting tables.
 
-The site uses short first-person project descriptions. It contains no fabricated testimonials, adoption figures, grade improvements or personal anecdotes. Proposed evaluation work is labelled as proposed. The wording follows the user’s requested direct style; it does not claim an exact match to a verified English writing sample.
+The site uses short first-person project descriptions. It contains no fabricated testimonials, adoption figures, grade improvements or personal anecdotes. Proposed evaluation work is labelled as proposed. The descriptions move from a concrete planning problem to the feature, the reason for the decision, and what still needs evaluating.
 
 ## Checks completed
 
 - All four main pages inspected at 320px, 390px and 1280px viewport widths; no document-level horizontal overflow.
-- Mobile menu and navigation exercised.
+- Four icon navigation links checked on desktop and mobile.
 - Review example: edit, confirm, reset and blank-name rejection exercised.
 - Screenshot dialog opening and closing exercised.
 - JavaScript syntax and local asset/link targets checked.
 
 External AI, email and the full planner were not tested as part of this static-site delivery. No GitHub deployment was performed.
+
+CSS and JavaScript URLs contain content-based version parameters. When changing either asset, update the corresponding version in all HTML pages to avoid mixed-version browser caches.
